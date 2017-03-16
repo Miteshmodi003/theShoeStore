@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>theShoeStore</title>
+    </h:head>
+    <h:body>
+        <h:messages globalOnly="true"/>
+        <h:form>
+            <h:panelGrid columns="12" style="background-color: blue;height:35%;width:100%">   
+               <h1 style="text-align: center;color: white;font-family: sans-serif;">theShoeStore</h1>
+            </h:panelGrid>
+            <h3>Sign up for our monthly deals</h3>
+
+            <h:panelGrid columns="6" style="color:green">
+               <h:outputLabel value="Email"/>
+               <h:inputText id="emailInputText" required="true" requiredMessage="Email is required" value="#{registration.email}" validatorMessage="Email is not valid" >
+                   <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+               </h:inputText>              
+               <h:commandButton value="Register" />
+               <h:message for="emailInputText" style="color:red"/>
+            </h:panelGrid>
+            
+            <h:panelGrid>
+                <h:outputText escape="false" style="color:red" value="#{registration.response}" />
+            </h:panelGrid>
+           
+            <table style="width:100%">
+                <tr>
+                    <th> January Release </th>
+                    <th> February Release </th>
+                    <th> March Release </th>
+                </tr>
+                <tr>
+                    <th><h:graphicImage name="janshoe.jpg" library="image" style="border: black solid 1px"/><br/>
+                        <strike>Regular Price: $49.99 USD</strike><br/>Our Price: $29.99 USD</th>
+                    <th><h:graphicImage name="febshoe.jpg" library="image" style="border: black solid 1px"/><br/>
+                        <strike>Regular Price: $49.99 USD</strike><br/>Our Price: $29.99 USD</th>
+                    <th><h:graphicImage name="marchshoe.jpg" library="image" style="border: black solid 1px"/><br/>
+                        <strike>Regular Price: $49.99 USD</strike><br/>Our Price: $29.99 USD</th>
+                </tr>
+            </table>
+            
+            <table style="width:100%">
+                <tr>
+                    <th> April Release </th>
+                    <th> May Release </th>
+                    <th> June Release </th>
+                </tr>
+                <tr>
+                    <th><h:graphicImage name="aprilshoe.jpg" library="image" style="border: black solid 1px"/><br/>
+                        <strike>Regular Price: $49.99 USD</strike><br/>Our Price: $29.99 USD</th>
+                    <th><h:graphicImage name="mayshoe.jpg" library="image" style="border: black solid 1px"/><br/>
+                        <strike>Regular Price: $49.99 USD</strike><br/>Our Price: $29.99 USD</th>
+                    <th><h:graphicImage name="juneshoe.jpg" library="image" style="border: black solid 1px"/><br/>
+                        <strike>Regular Price: $49.99 USD</strike><br/>Our Price: $29.99 USD</th>
+                </tr>
+            </table>
+        </h:form>
+    </h:body>
+</html>
+
